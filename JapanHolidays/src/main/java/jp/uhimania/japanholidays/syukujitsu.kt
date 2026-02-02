@@ -1,6 +1,8 @@
 package jp.uhimania.japanholidays
 
-internal val holidays = mapOf(
+import java.util.concurrent.ConcurrentHashMap
+
+internal val holidays = ConcurrentHashMap(mapOf(
 "1955/1/1" to "元日",
 "1955/1/15" to "成人の日",
 "1955/3/21" to "春分の日",
@@ -1051,4 +1053,4 @@ internal val holidays = mapOf(
 "2026/10/12" to "スポーツの日",
 "2026/11/3" to "文化の日",
 "2026/11/23" to "勤労感謝の日",
-)
+))

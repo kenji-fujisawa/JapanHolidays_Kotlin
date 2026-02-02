@@ -18,8 +18,10 @@ sed -i '' 's/$/",/' $filename
 sed -i '' '1i\
 package jp.uhimania.japanholidays\
 \
-internal val holidays = mapOf(
+import java.util.concurrent.ConcurrentHashMap\
+\
+internal val holidays = ConcurrentHashMap(mapOf(
 ' $filename
 sed -i '' '$a\
-)
+))
 ' $filename
