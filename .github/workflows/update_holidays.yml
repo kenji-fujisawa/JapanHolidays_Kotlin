@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      changed: ${{ steps.filter.outputs.src }}
+      changed: ${{ steps.filter.outputs.changed }}
 
     steps:
       - name: checkout
@@ -21,15 +21,16 @@ jobs:
 
       - name: check changes
         id: filter
-        uses: dorny/paths-filter@v3
-        with:
-          filters: |
-            src:
-              - 'JapanHolidays/src/**'
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
 
   commit:
     needs: download
-    if: ${{ needs.download.outputs.src == 'true' }}
+    if: ${{ needs.download.outputs.changed == 'true' }}
     runs-on: ubuntu-latest
 
     permissions:
