@@ -1,0 +1,52 @@
+name: Update Holidays
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 * *"
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+
+    outputs:
+      changed: ${{ steps.filter.outputs.src }}
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: download latest csv
+        run: ./scripts/update_holidays.sh
+
+      - name: check changes
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            src:
+              - 'JapanHolidays/src/**'
+
+  commit:
+    needs: download
+    if: ${{ needs.download.outputs.src == 'true' }}
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: increment version
+        id: increment_version
+        run: |
+          RESULT=$(./scripts/increment_version.sh)
+          echo "version=${RESULT}" >> "$GITHUB_OUTPUT"
+
+      - name: build repository
+        run: ./gradlew publishReleasePublicationToRepositoryRepository
+
+      - name: commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "v${{ steps.increment_version.outputs.version }}"
+          
