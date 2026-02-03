@@ -60,11 +60,12 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
+            val libraryVersion: String by project
             create<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "jp.uhimania.japanholidays"
                 artifactId = "japanholidays"
-                version = "0.0.0"
+                version = libraryVersion
             }
         }
 
