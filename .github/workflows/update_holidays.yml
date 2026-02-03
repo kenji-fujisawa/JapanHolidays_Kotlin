@@ -37,6 +37,12 @@ jobs:
       contents: write
 
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: download latest csv
+        run: ./scripts/update_holidays.sh
+
       - name: increment version
         id: increment_version
         run: |
