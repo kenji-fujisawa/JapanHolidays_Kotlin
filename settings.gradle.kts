@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "JapanHolidays"
-include(":app")
+include(":JapanHolidays")
