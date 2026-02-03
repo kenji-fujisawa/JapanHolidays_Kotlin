@@ -56,4 +56,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "v${{ steps.increment_version.outputs.version }}"
-          
+
+      - name: tag
+        run: |
+          git tag v${{ steps.increment_version.outputs.version }}
+          git push origin v${{ steps.increment_version.outputs.version }}
