@@ -7,6 +7,7 @@ on:
 
 jobs:
   download:
+    name: download and check changes
     runs-on: ubuntu-latest
 
     outputs:
@@ -29,6 +30,7 @@ jobs:
           fi
 
   commit:
+    name: build and commit
     needs: download
     if: ${{ needs.download.outputs.changed == 'true' }}
     runs-on: ubuntu-latest
