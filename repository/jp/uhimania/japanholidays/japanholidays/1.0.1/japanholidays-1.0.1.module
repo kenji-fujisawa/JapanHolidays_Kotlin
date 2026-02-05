@@ -1,0 +1,148 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "jp.uhimania.japanholidays",
+    "module": "japanholidays",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.13"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "japanholidays-1.0.1.aar",
+          "url": "japanholidays-1.0.1.aar",
+          "size": 39306,
+          "sha512": "be7ca3604397dc5273d426fc3312af7f9209fa2108e7cafc5a19a930488f0c9a7c8c235702d2494e0d93952eed543ed164baf3290426ef63a809a65e192b2e08",
+          "sha256": "3b77fd002ac7fd70418b8c2c4c9149d75ef26ee4c114658c083de1fccb408768",
+          "sha1": "27d471738c8b87e1e01c1178a4e43739fc41c2cd",
+          "md5": "4a3f445a3ed1b3658ba3135a580d17af"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.17.0"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.7.1"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.13.0"
+          }
+        },
+        {
+          "group": "androidx.startup",
+          "module": "startup-runtime",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-core",
+          "version": {
+            "requires": "3.1.1"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-android",
+          "version": {
+            "requires": "3.1.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.10.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "japanholidays-1.0.1.aar",
+          "url": "japanholidays-1.0.1.aar",
+          "size": 39306,
+          "sha512": "be7ca3604397dc5273d426fc3312af7f9209fa2108e7cafc5a19a930488f0c9a7c8c235702d2494e0d93952eed543ed164baf3290426ef63a809a65e192b2e08",
+          "sha256": "3b77fd002ac7fd70418b8c2c4c9149d75ef26ee4c114658c083de1fccb408768",
+          "sha1": "27d471738c8b87e1e01c1178a4e43739fc41c2cd",
+          "md5": "4a3f445a3ed1b3658ba3135a580d17af"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "japanholidays-1.0.1-sources.jar",
+          "url": "japanholidays-1.0.1-sources.jar",
+          "size": 23045,
+          "sha512": "bf448081043454739b197a046dcf1a2cbf3115d19dd68596c3eb15329ed3f725cbd31c0801bb8480c450d11b68b09a8c5212eae7f3e7a262f31d8e88cf6efe1b",
+          "sha256": "dee65db00685cc138b0684f2d89cb95ed385239932625b90ac40dfadc4d77ad1",
+          "sha1": "8b15452cb5518529b6d88c2ce96db2dd2c9fb228",
+          "md5": "eeaa9e2e9764497aa85cbe01cf37fdac"
+        }
+      ]
+    }
+  ]
+}

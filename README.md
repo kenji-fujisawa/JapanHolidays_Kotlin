@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation("jp.uhimania.japanholidays:japanholidays:1.0.0")
+    implementation("jp.uhimania.japanholidays:japanholidays:1.0.1")
 }
 ```
 
@@ -51,7 +51,7 @@ Holidays.getName(LocalDate.of(2025, 1, 12))                 // null
 
 ## 補足
 
-初期状態で 2026 年までの祝日データを内包していますが、以降はアプリ起動時に 30 日おきに最新データをチェックし、SQLite にキャッシュします
+初期状態で 2027 年までの祝日データを内包していますが、以降はアプリ起動時に 30 日おきに最新データをチェックし、SQLite にキャッシュします
 
 また、アプリ起動時に非同期で SQLite を読み込むので、メソッドの呼び出し時点で初期化が完了していなかった場合は正しい結果が得られない可能性があります  
 そのような場合は `joinInit()` で初期化完了を待機してください
