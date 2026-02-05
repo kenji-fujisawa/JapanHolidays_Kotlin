@@ -66,6 +66,28 @@ afterEvaluate {
                 groupId = "jp.uhimania.japanholidays"
                 artifactId = "japanholidays"
                 version = libraryVersion
+
+                pom {
+                    name = "JapanHolidays_Kotlin"
+                    description = "Japanese holiday library for Kotlin"
+                    url = "https://github.com/kenji-fujisawa/JapanHolidays_Kotlin"
+                    licenses {
+                        license {
+                            name = "MIT License"
+                            url = "https://opensource.org/licenses/MIT"
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = "kenji-fujisawa"
+                            name = "Kenji Fujisawa"
+                            email = "kenji_fujisawa@icloud.com"
+                        }
+                    }
+                    scm {
+                        url = "https://github.com/kenji-fujisawa/JapanHolidays_Kotlin"
+                    }
+                }
             }
         }
 
