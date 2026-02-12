@@ -1,6 +1,5 @@
-package jp.uhimania.japanholidays.data
+package jp.uhimania.japanholidays
 
-import jp.uhimania.japanholidays.Holidays
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
