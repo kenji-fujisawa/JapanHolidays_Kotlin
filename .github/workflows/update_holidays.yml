@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: download latest csv
         run: ./scripts/update_holidays.sh
@@ -40,7 +40,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: download latest csv
         run: ./scripts/update_holidays.sh
@@ -55,7 +55,7 @@ jobs:
         run: ./gradlew publishReleasePublicationToRepositoryRepository
 
       - name: commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "v${{ steps.increment_version.outputs.version }}"
 
